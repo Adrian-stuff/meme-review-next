@@ -9,7 +9,15 @@
   },
   "dependencies": {
     "next": "10.2.3",
+    "next-themes": "^0.0.14",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "reactn": "^2.2.7",
+    "socket.io-client": "^4.1.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4"
   }
 }
