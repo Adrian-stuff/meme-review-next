@@ -117,7 +117,7 @@ const roomId = () => {
               <DarkModeButton cN="absolute mt-2 mr-2" />
             </div>
 
-            <Message cN="flex w-full" buttonCN="mr-2" socket={socket} />
+            <Message cN="mb-4 flex w-full" buttonCN="mr-2" socket={socket} />
           </SlidingPane>
         </>
       )}
