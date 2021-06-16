@@ -128,7 +128,7 @@ export default function Home() {
             {rooms[0] != null ? (
               rooms.map((i, idx) => {
                 return (
-                  <a className="px-2" key={idx} href={`/rooms/${i}`}>
+                  <a className="px-2" key={idx} href={`/room/${i}`}>
                     {i}
                   </a>
                 );
