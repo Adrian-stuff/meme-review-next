@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useGlobal } from "reactn";
 import Modal from "react-modal";
 import Head from "next/head";
+import Link from "next/link";
 import router from "next/router";
 import Input from "./components/Forms/Input";
 import Button from "./components/Forms/Button";
@@ -128,9 +129,9 @@ export default function Home() {
             {rooms[0] != null ? (
               rooms.map((i, idx) => {
                 return (
-                  <a className="px-2" key={idx} href={`/room/${i}`}>
-                    {i}
-                  </a>
+                  <Link href={`/room/${i}`} key={idx}>
+                    <a className="px-2">{i}</a>
+                  </Link>
                 );
               })
             ) : (
