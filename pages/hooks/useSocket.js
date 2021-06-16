@@ -5,7 +5,7 @@ const useSocket = () => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    let s = io("http://localhost:8000/");
+    let s = io("https://doge-meme-server.herokuapp.com/");
     setSocket(s);
     return () => {
       s.disconnect();

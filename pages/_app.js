@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import globalState from "./globalState";
+import globalState from "../globalState";
 import { ThemeProvider } from "next-themes";
 
 globalState();
