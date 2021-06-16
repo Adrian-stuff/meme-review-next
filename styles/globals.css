@@ -9,6 +9,7 @@
 .slowOut {
   @apply transition duration-300 ease-out;
 }
+
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;

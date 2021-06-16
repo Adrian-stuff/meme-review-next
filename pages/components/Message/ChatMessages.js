@@ -15,20 +15,18 @@ const ChatMessages = () => {
   return (
     <div
       style={{ height: "512px" }}
-      className="flex flex-col overflow-y-auto w-64 px-2"
+      className="flex flex-col overflow-y-auto p-2 break-all"
     >
       {messages &&
         messages.map((i, idx) => {
           return (
             <div className="flex " key={idx}>
-              <div className="flex">
-                <p className="dark:text-gray-400">
-                  <span className="dark:text-blue-300 text-purple-500">
-                    {i.username}:{" "}
-                  </span>{" "}
-                  {i.message}
-                </p>
-              </div>
+              <p className="dark:text-gray-400">
+                <span className="dark:text-blue-300 text-purple-500">
+                  {i.username}:{" "}
+                </span>{" "}
+                {i.message}
+              </p>
             </div>
           );
         })}

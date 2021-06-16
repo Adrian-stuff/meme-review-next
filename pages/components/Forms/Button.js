@@ -1,7 +1,9 @@
 import React from "react";
-const Button = ({ type, onClick, text, cN, disabled }) => {
+const Button = ({ type, onClick, text, cN, aCN, disabled }) => {
   return (
-    <div className="flex w-auto justify-center items-center select-none">
+    <div
+      className={`${aCN} flex w-auto justify-center items-center select-none`}
+    >
       <button
         type={type}
         onClick={onClick || "button"}

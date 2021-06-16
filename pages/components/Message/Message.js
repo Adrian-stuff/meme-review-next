@@ -3,7 +3,7 @@ import Button from "../Forms/Button";
 import Input from "../Forms/Input";
 import ChatMessages from "./ChatMessages";
 import useSocket from "../../hooks/useSocket";
-const Message = ({ socket }) => {
+const Message = ({ socket, cN, buttonCN }) => {
   const [message, setMessage] = useState("");
   const [username, setUsername] = useGlobal("username");
   const sendMessage = (e) => {
@@ -16,18 +16,20 @@ const Message = ({ socket }) => {
     });
     setMessage("");
   };
+
   return (
     <form
       onSubmit={sendMessage}
-      className="flex flex-col dark:ring-gray-600 ring-gray-400 ring-1 rounded-lg"
+      className={`${cN} flex-col dark:ring-gray-600 ring-gray-400 ring-1 rounded-lg`}
     >
       <ChatMessages />
       <Input
         value={message || ""}
+        cN="w-full"
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Message"
       >
-        <Button cN="mr-2" onClick={sendMessage} text="Send" />
+        <Button aCN={buttonCN} onClick={sendMessage} text="Send" />
       </Input>
     </form>
   );
