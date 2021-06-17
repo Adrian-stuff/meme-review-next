@@ -12,7 +12,7 @@ import "react-sliding-pane/dist/react-sliding-pane.css";
 const roomId = () => {
   const router = useRouter();
   const { roomId } = router.query;
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [username, setUsername] = useGlobal("username");
   const [data, setData] = useState();
   const [subreddit, setSubreddit] = useState("");
@@ -20,9 +20,9 @@ const roomId = () => {
   const [messages, setMessages] = useGlobal("messages");
   const socket = useSocket();
   let tempArr = [];
-  // useEffect(() => {
-  //   if (username === undefined || "") return router.push("/");
-  // }, []);
+  useEffect(() => {
+    if (username === undefined || "") return router.push("/");
+  }, []);
   useEffect(() => {
     if (socket == null) return;
     socket.on("connect", () => {
