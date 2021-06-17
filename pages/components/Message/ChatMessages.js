@@ -7,11 +7,8 @@ const ChatMessages = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   });
   useEffect(() => {
-    return () => {
-      setMessages("");
-    };
+    messagesEndRef.current?.scrollIntoView();
   }, []);
-
   return (
     <div
       style={{ height: "512px" }}

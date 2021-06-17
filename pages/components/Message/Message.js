@@ -2,7 +2,6 @@ import React, { useState, useGlobal } from "reactn";
 import Button from "../Forms/Button";
 import Input from "../Forms/Input";
 import ChatMessages from "./ChatMessages";
-import useSocket from "../../hooks/useSocket";
 const Message = ({ socket, cN, buttonCN }) => {
   const [message, setMessage] = useState("");
   const [username, setUsername] = useGlobal("username");
@@ -16,7 +15,6 @@ const Message = ({ socket, cN, buttonCN }) => {
     });
     setMessage("");
   };
-
   return (
     <form
       onSubmit={sendMessage}

@@ -22,6 +22,7 @@ const roomId = () => {
   let tempArr = [];
   useEffect(() => {
     if (username === undefined || "") return router.push("/");
+    return () => setMessages("");
   }, []);
   useEffect(() => {
     if (socket == null) return;
