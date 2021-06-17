@@ -22,6 +22,7 @@ const roomId = () => {
   let tempArr = [];
   useEffect(() => {
     if (username === undefined || "") return router.push("/");
+    return () => setMessages("");
   }, []);
   useEffect(() => {
     if (socket == null) return;
@@ -113,8 +114,8 @@ const roomId = () => {
             width="100%"
             onRequestClose={() => setisMessageDrawerOpen(false)}
           >
-            <div className="flex justify-end">
-              <DarkModeButton cN="absolute mt-2 mr-2" />
+            <div className="flex justify-end opacity-20 slowInOut hover:opacity-100">
+              <DarkModeButton cN="absolute mt-2 mr-3" />
             </div>
 
             <Message cN="mb-10 flex w-full" buttonCN="mr-2" socket={socket} />
